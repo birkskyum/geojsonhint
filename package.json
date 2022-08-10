@@ -18,7 +18,7 @@
     "concat-stream": "^2.0.0",
     "jsonlint-lines": "1.7.1",
     "minimist": "^1.2.5",
-    "vfile": "^4.0.0",
+    "vfile": "^5.3.4",
     "vfile-reporter": "^5.1.1"
   },
   "devDependencies": {
