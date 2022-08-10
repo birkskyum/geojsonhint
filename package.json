@@ -43,7 +43,8 @@
     "url": "git://github.com/maplibre/geojsonhint.git"
   },
   "scripts": {
-    "test": "eslint . && tap test/*.js --coverage",
+    "test": "tap test/*.js --coverage",
+    "lint": "eslint .",
     "prepublish": "browserify . --standalone geojsonhint > geojsonhint.js"
   }
 }
