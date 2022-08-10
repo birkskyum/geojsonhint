@@ -1,10 +1,10 @@
-var test = require('tap').test,
-    fs = require('fs'),
-    glob = require('glob'),
-    fuzzer = require('fuzzer'),
-    exec = require('child_process').exec,
-    path = require('path'),
-    geojsonhint = require('../');
+import {test} from 'tap';
+import fs from 'fs';
+import glob from 'glob';
+import fuzzer from 'fuzzer';
+import childProcess from 'child_process';
+import path from 'path';
+import geojsonhint from '../';
 
 function file(x) {
     return fs.readFileSync(x, 'utf8');
@@ -40,7 +40,7 @@ test('geojsonhint', function(t) {
     test('binary produces output for bad files', function(t) {
         glob.sync('test/data/bad/*.geojson').slice(0, 10).forEach(function(f) {
             t.test(f + ' pretty', function(tt) {
-                exec(path.join(__dirname, '../bin/geojsonhint ' + f), function(err, output) {
+                childProcess.exec(path.join(__dirname, '../bin/geojsonhint ' + f), function(err, output) {
                     if (process.env.UPDATE) {
                         fs.writeFileSync(f.replace('geojson', 'cli-output-pretty'), output);
                     }
@@ -50,7 +50,7 @@ test('geojsonhint', function(t) {
                 });
             });
             t.test(f + ' json', function(tt) {
-                exec(path.join(__dirname, '../bin/geojsonhint ' + f + ' --format=json'), function(err, output) {
+                childProcess.exec(path.join(__dirname, '../bin/geojsonhint ' + f + ' --format=json'), function(err, output) {
                     if (process.env.UPDATE) {
                         fs.writeFileSync(f.replace('geojson', 'cli-output-json'), output);
                     }
@@ -66,7 +66,7 @@ test('geojsonhint', function(t) {
         var bin = path.join(__dirname, '../bin/geojsonhint')
         var f = glob.sync('test/data/bad/*.geojson')[0];
         t.test(f + ' pretty', function(tt) {
-            exec(bin + ' ' + f, function(err, output) {
+            childProcess.exec(bin + ' ' + f, function(err, output) {
                 tt.ok(err, 'missing error');
                 tt.equal(err.code, 1);
                 // rule out errors we don't expect
@@ -76,7 +76,7 @@ test('geojsonhint', function(t) {
             });
         });
         t.test(f + ' json', function(tt) {
-            exec(bin + ' ' + f + ' --format=json', function(err, output) {
+            childProcess.exec(bin + ' ' + f + ' --format=json', function(err, output) {
                 tt.ok(err, 'missing error');
                 tt.equal(err.code, 1);
                 // rule out errors we don't expect
