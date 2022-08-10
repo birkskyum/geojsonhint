@@ -1,5 +1,3 @@
-[![Build Status](https://secure.travis-ci.org/mapbox/geojsonhint.svg?branch=master)](http://travis-ci.org/mapbox/geojsonhint) [![Coverage Status](https://coveralls.io/repos/mapbox/geojsonhint/badge.svg)](https://coveralls.io/r/mapbox/geojsonhint)
-
 # geojsonhint: complete, fast, standards-based validation for geojson
 
 Important: development of geojsonhint is currently paused. Until development restarts, please refrain from adding non-critical issues or PRs.
@@ -96,19 +94,19 @@ interface.
 
 **npm** (node.js, browserify, webpack, etc)
 
-    npm install --save @mapbox/geojsonhint
+    npm install --save @maplibre/geojsonhint
 
 **CDN / script tag**
 
 Hit this URL to resolve to the latest pinned version.
 
-    https://unpkg.com/@mapbox/geojsonhint@latest/geojsonhint.js
+    https://unpkg.com/@maplibre/geojsonhint@latest/geojsonhint.js
 
 ## As a command-line utility
 
 Install:
 
-    npm install -g @mapbox/geojsonhint
+    npm install -g @maplibre/geojsonhint
 
 ```
 ➟ geojsonhint
