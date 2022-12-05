@@ -24,7 +24,7 @@
   "devDependencies": {
     "benchmark": "^2.1.0",
     "browserify": "^17.0.0",
-    "eslint": "^8.21.0",
+    "eslint": "^8.29.0",
     "fuzzer": "~0.2.0",
     "glob": "^8.0.3",
     "tap": "^12.6.1"
