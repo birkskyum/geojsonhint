@@ -27,7 +27,7 @@
     "eslint": "^8.21.0",
     "fuzzer": "~0.2.0",
     "glob": "^8.0.3",
-    "tap": "^12.6.1"
+    "tap": "^16.3.3"
   },
   "directories": {
     "test": "test"
